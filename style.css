@@ -1,0 +1,134 @@
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+  padding: 10px 100px ;
+  width: 30%;
+  background: #1abc9c;
+  text-align: center;
+  margin: 10px 25% 10px ;
+}
+
+/* Month list */
+.month ul {
+  margin: 10px 100px;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+/* Weekdays (Mon-Sun) */
+.weekdays {
+  /* margin: 0; */
+  margin: 2px 132px;
+  padding: 10px 10px;
+  background-color:#ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+  /* padding: 10px 0; */
+  background: #eee;
+  /* margin: 0; */
+  margin: 2px 132px;
+  padding: 10px 10px;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+/* Highlight the "current" day */
+.days li .active {
+  padding: 5px;
+  background: #1abc9c;
+  color: white !important
+}
+h1{
+  background-color: #acf568;
+  text-align: center;
+  margin: 10px 10px;
+  padding: 10px 10px;
+}
+.container{
+  font-weight: bold;
+   text-align: right;
+   padding-right: 100px;
+}
+.cent{
+  font-weight: bold;
+  text-align: center; 
+  margin-top: 0px;
+}
+ /* text Animation */
+ 
+ #textAnimation {
+  width: 500px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 0px 0px 400px;
+}
+
+#textstatic, #textdynamic {
+  width: 300px;
+  height: 50px;
+  padding: 3px;
+  font-size: 40px;
+  font-weight: 800;
+  color: grey;
+  text-align: center ;
+}
+
+#textdynamic {
+  background-color: rgb(26, 139, 26);
+  animation: textAniBg 3s linear infinite ;
+}
+#textAnimation > #textdynamic::before {
+  color: white;
+  content: "LIFESTYLE";
+  animation: textAni 3s linear infinite ;
+}
+@keyframes textAni {
+  0% {
+      content: "LIFESTYLE";
+  }
+  50% {
+      content: "EVERYTHING";
+  }
+  100% {
+      content: "WORK";
+  }
+}
+
+@keyframes textAniBg {
+  0% {
+      background-color: rgb(26, 139, 26);
+  }
+  50% {
+      background-color: rgb(222, 10, 10);
+  }
+  100% {
+      background-color: rgb(10, 146, 220);
+  }
+}
